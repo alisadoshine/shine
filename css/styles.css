@@ -1,0 +1,731 @@
+:root{
+    --lightPink: #fee2b3;
+    --pink: #ffa299;
+    --lightViolet: #ad6989;
+    --violet: #562349;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    background: #fff;
+    overflow-x: hidden;
+    font-family: 'Raleway', sans-serif;
+}
+
+
+
+
+
+
+
+
+
+/*  Menu de navegacion  */
+#header{
+    position: relative;
+    width: 100%;
+}
+
+.menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 15vh;
+    background: #fff;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9999;
+}
+
+.menu .logo-box{
+    margin-left: 20px;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.menu .logo-box h1{
+    text-decoration: none;
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+    color: var(--lightViolet);
+    cursor: pointer;
+}
+
+.menu .logo-box img{
+    height: 50px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+.menu .list-container{
+    margin-right: 20px;
+}
+
+.menu .list-container .lists{
+    display: flex;
+}
+
+.menu .list-container .lists li {
+    list-style: none;
+}
+
+.menu .list-container .lists li a{
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 8px;
+    color: var(--lightViolet);
+    border-radius: 25px;
+    font-size: 20px;
+    font-weight: 800;
+    transition: all .3s;
+    text-align: center;
+}
+
+.menu .list-container .lists li a.activo{
+    background: var(--violet);
+    color: #fff;
+}
+
+.menu .list-container .lists li a:hover{
+    background: var(--violet);
+    color: #fff;
+}
+
+.btn-menu > .fa-bars{
+    display: none;
+}
+
+
+
+
+
+
+
+
+/*      IMG HEADER      */
+
+.img-header{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(../img/fondo-1.png);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.img-header .welcome{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.img-header .welcome h1{
+    margin-top: 50px;
+    font-size: 80px;
+    color: #fff;
+    font-weight: 1000;
+    text-align: center;
+}
+
+.img-header .welcome hr{
+    width: 80%;
+    height: 2px;
+    background: #fff;
+    border: none;
+    margin-top: 5px;
+
+}
+
+.img-header .welcome p{
+    font-size: 40px;
+    color: #fff;
+    padding-top: 30px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.img-header .welcome > button{
+    width: 200px;
+    height: 50px;
+    background: var(--violet);
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.img-header .welcome > button:hover{
+    background: var(--lightViolet);
+}
+
+.skew-abajo{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-width: 0 0 10vh 100vw;
+    border-style: solid;
+    border-color: transparent transparent #fff transparent;
+}
+
+.skew-arriba{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-width: 10vh 100vw 0 0;
+    border-style: solid;
+    border-color: #fff transparent transparent transparent;
+    z-index: 10;
+}
+
+
+
+
+
+
+
+
+/*  Sobre nosotros  */
+
+.acerca-de{
+    width: 100%;
+}
+
+.acerca-de .info-container{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+}
+
+.acerca-de .info-container h1{
+    margin-top: 100px;
+    font-size: 70px;
+    font-weight: 600;
+    color: var(--violet);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.acerca-de .info-container hr{
+    width: 50%;
+    border: none;
+    background: var(--violet);
+    margin: auto;
+    height: 2px;
+}
+
+.acerca-de .info-container p{
+    text-align: center;
+    font-size: 30px;
+    color: #000;
+    font-weight: 600;
+    line-height: 40px;
+    margin: 30px 0;
+}
+
+.wall img{
+    margin: 10px 0px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: rgba(0,0,0,0.6);
+}
+
+
+
+
+
+
+
+
+
+
+
+/*  Tratamientos    */
+.tratamientos{
+    width: 100%;
+    padding: 10px;
+}
+
+.tratamientos-title{
+    font-size: 40px;
+    font-weight: 600;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    color: var(--violet);
+}
+.tratamientos .tratamientos-title .h2{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.tratamientos-title hr{
+    width: 90%;
+    margin: auto;
+    height: 2px;
+    border: none;
+    background: var(--violet);
+}
+
+.box-tratamientos{
+    width: 100%;
+    margin: 10px auto;
+
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+}
+
+.box-tratamientos .card-tratamientos{
+    width: 45%;
+    margin: 10px;
+    border: 2px solid var(--lightViolet);
+    border-radius: 5px;
+}
+
+.card-tratamientos .card-title{
+    font-size: 35px;
+    font-weight: 1000;
+    color: var(--violet);
+    padding: 10px;
+    text-align: center;
+    background: var(--lightViolet);
+    margin-bottom: 10px;
+}
+
+.card-tratamientos .card-text{
+    text-align: center;
+    font-size: 25px;
+    line-height: 50px;
+    padding: 20px;
+    color: #000;
+    font-weight: 600;
+}
+
+.pre{
+    margin: 90px 0;
+    text-align: center;
+    background: var(--lightViolet);
+}
+
+.pre h3{
+    padding: 30px 0;
+    font-size: 40px;
+    color: var(--violet);
+    font-weight: 800;
+    text-align: center;
+}
+
+.pre p{
+    padding: 30px 0;
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+/*  Trabajos    */
+.our-projects{
+    margin-top: 50px;
+    padding: 50px 0;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url(../img/fondo-2.png);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.our-projects .deg-background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+}
+
+.our-projects .ejeZproject{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.our-projects .container-project{
+    width: 90%;
+    margin: auto;
+    padding-top: 30px;
+}
+
+.our-projects .container-project .project-title{
+    border: 2px solid #fff;
+    padding: 10px;
+    text-align: center;
+    width: 50%;
+    margin: auto;
+}
+
+.our-projects .container-project .project-title h2{
+    font-size: 60px;
+    color: #fff;
+    font-weight: normal;
+}
+
+.our-projects .container-project .project-title hr{
+    background: #fff;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.our-projects .container-project .project-img{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+.our-projects .container-project .project-img img{
+    width: calc(30% - 10px);
+    margin: 10px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+/*  Contacto    */
+.contact{
+    margin-top: 100px;
+}
+
+.contact .contact-title{
+    font-size: 60px;
+    color: var(--violet);
+    font-weight: 1000;
+    text-align: center;
+}
+
+.contact .subtitle{
+    font-size: 40px;
+    padding-top: 10px;
+    text-align: center;
+    color: var(--violet);
+    color: #000;
+    font-weight: 600;
+}
+
+.contact hr{
+    background: var(--violet);
+    border: none;
+    width: 90%;
+    margin: auto;
+    height: 3px;
+}
+
+.social{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    margin: 50px;
+}
+
+.social a i{
+    color: var(--violet);
+    transition: all .2s;
+}
+
+.social a i:hover{
+    color: var(--lightViolet);
+}
+
+
+.fin{
+    background: #000;
+    border-top: 20px solid var(--violet)
+}
+
+.fin p{
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.espacio{
+    height: 15vh;
+}
+
+
+
+
+
+/*  MEDIA QUERIE*/
+@media only screen and (max-width:950px){
+    .btn-menu > .fa-bars{
+        display: block;
+        position: absolute;
+        top: 35px;
+        right: 30px;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    .btn-menu > .fa-bars:hover{
+        color: var(--lightViolet);
+    }
+
+    .btn-menu > .fa-times:hover{
+        color: var(--lightViolet);
+    }
+
+    .menu .list-container{
+        position: absolute;
+        top: 90px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 60px);
+        background: #fff;
+    }
+
+    .menu .list-container .lists{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column wrap;
+        border-top: 5px solid var(--violet);
+    }
+
+    .menu .list-container .lists li{
+        width: 90%;
+        margin: 10px 0;
+        border-bottom: 5px solid var(--violet);
+        text-align: center;
+        margin: 20px 0;
+    }
+    .menu .list-container .lists li a{
+        color: #000;
+        font-size: 25px;
+        font-weight: 1000;
+    }
+
+    .menu .list-container .lists li a.activo{
+        background: none;
+        color: var(--lightViolet);
+    }
+
+    .menu .list-container .lists li a:hover{
+        background: none;
+        color: var(--lightViolet);
+    }
+
+    .img-header .welcome hr{
+        width: 95%;
+    }
+
+    .acerca-de .info-container hr{
+        width: 95%;
+    }
+
+    .tratamientos .tratamientos-title hr{
+        width: 0;
+    }
+}
+
+@media only screen and (max-width:750px){
+    .box-tratamientos .card-tratamientos{
+        width: 90%;
+    }
+
+    .our-projects .container-project .project-img img{
+        width: 40%;
+    }
+
+    .our-projects .container-project .project-title{
+        width: 95%;
+    }
+
+}
+
+@media only screen and (max-width:550px){
+    .acerca-de .info-container{
+        width: 100%;
+    }
+
+    .tratamientos{
+        padding: 5px;
+    }
+
+    .card-tratamientos .card-text{
+        padding: 5px;
+
+    }
+
+    .our-projects .container-project .project-img img{
+        width: 95%;
+    }
+}
+
+@media only screen and (max-width:450px){
+    .menu .logo-box{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .menu .logo-box h1{
+        font-size: 25px;
+    }
+
+    .img-header .welcome h1{
+        font-size: 40px;
+    }
+
+    .img-header .welcome p{
+        font-size: 20px;
+    }
+
+    #abajo{
+        font-size: 20px;
+    }
+
+    .acerca-de .info-container h1{
+        font-size: 40px;
+    }
+
+    .acerca-de .info-container p{
+        font-size: 20px;
+    }
+
+    .tratamientos-title{
+        font-size: 30px;
+    }
+
+    .card-tratamientos .card-title{
+        font-size: 30px;
+    }
+
+    .card-tratamientos .card-text{
+        font-size: 20px;
+    }
+
+    .social{
+        justify-content: space-between;
+    }
+
+    .skew-abajo{
+        display: none;
+    }
+
+    .skew-arriba{
+        display: none;
+    }
+
+    .contact .fin p{
+        font-size: 12px;
+    }
+    
+    .pre{
+        text-align: center;
+    }
+    
+    .pre h3{
+        font-size: 30px;
+        color: var(--violet);
+        font-weight: 800;
+        text-align: center;
+    }
+    
+    .pre p{
+        font-size: 20px;
+        font-weight: 600;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width:350px){
+    .menu{
+        height: 25vh;
+    }
+    .menu .list-container{
+        top: 25vh;
+    }
+
+    .btn-menu > .fa-bars{
+        top: 5vh;
+        right: 40%;
+        font-size: 25px;
+    }
+
+    .menu .logo-box{
+        flex-flow: row wrap;
+        justify-content: center;
+        padding-top: 10vh;
+        align-items: center;
+    }
+
+    .acerca-de .info-container h1{
+        font-size: 30px;
+    }
+
+    .acerca-de .info-container p{
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    .tratamientos-title{
+        font-size: 20px;
+    }
+
+    .card-tratamientos .card-title{
+        font-size: 25px;
+    }
+
+    .card-tratamientos .card-text{
+        font-size: 20px;
+        line-height: 25px;
+        padding: 15px 0;
+        margin: 0;
+    }
+
+}
